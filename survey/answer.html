@@ -175,7 +175,7 @@
             name="hidden_iframe"
             id="hidden_iframe"
             style="display: none"
-            onload="if(submitted){document.cookie = `y=${ID};`;localStorage.setItem('y',ID);window.location='https://cherryrains.github.io/ycs/survey/thanks.html#'+ID}"
+            onload="if(submitted){document.cookie = `y=${ID};`;localStorage.setItem('y',ID);window.location='https://cherryrains.github.io/feel-like-autumn/survey/thanks.html#'+ID}"
           ></iframe>
         </main>
         <script>
@@ -183,7 +183,9 @@
             location.hash.replace("#", "")
           );
           if(localStorage.getItem("y")!=""&&localStorage.getItem("y")!=null){
-            window.location='https://cherryrains.github.io/ycs/survey/thanks.html#'+localStorage.getItem("y");
+            if(localStorage.getItem("pro")!="tcu-todoroki"){
+            window.location='https://cherryrains.github.io/feel-like-autumn/survey/thanks.html#'+localStorage.getItem("y");
+            }
           }
           let ID = Math.round(Math.random()*10000000)
           ID=String(ID)+"-"+String("ABCEKLNRSTWXYZ"[ID%13]);
